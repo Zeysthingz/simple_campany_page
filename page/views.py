@@ -11,6 +11,15 @@ def index(request):
     # print(request.META)
     # print(request.HEADER)
     # return HttpResponse("Hello, world. You're at the polls index.")
-    context={}
+    context = {}
 
-    return render(request, 'page/index.html',context)
+    return render(request, 'page/index.html', context)
+
+
+def about(request):
+    context = {}
+    return render(request, 'page/about.html', context)
+
+def contact(request):
+    context = {}
+    return render(request, 'page/contact.html', context)
