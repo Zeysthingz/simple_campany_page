@@ -1,7 +1,7 @@
 <!--kinda imported base html-->
 {% extends 'core/base.html' %}
-{% block content %}
 
+{% block container-fluid %}
     <!-- HERO CONTENT START-->
     <div class="container-fluid mb-5">
         <div class="row">
@@ -23,7 +23,10 @@
         </div>
     </div>
     <!-- Hero  CONTENT END-->
-    <div class="container ">
+{% endblock container-fluid %}
+{% block container %}
+    <!-- Hero  CONTENT END-->
+    <div class="container">
         <div class="row">
             <!--            sağ ve soldan 2lk grıdler bos kalır offset ıkı olmasıda sagdan ıkı bosluk yana kaydırması demektır-->
             <div class="col-sm-8 offset-2 mb-5">
@@ -64,7 +67,7 @@
             </div>
         </div>
     </div>
-{% endblock %}
+{% endblock container %}
 
 
 
