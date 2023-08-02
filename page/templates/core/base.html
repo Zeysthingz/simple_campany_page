@@ -20,16 +20,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'index'%}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active " href="about_us.html">About Us</a>
+                        <a class="nav-link active " href="{%url 'about'%}">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Developers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
+                        <a class="nav-link active" href="{%url 'contact'%}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -37,11 +37,15 @@
     </nav>
     <!--    NAV END-->
 
+    {% block container-fluid %}
+    {% endblock container-fluid %}
     <!--Main content came from specified file-->
-    <div class="container">
-        {% block content %}
-        {% endblock content %}
-    </div>
+
+    {% block container %}
+    {% endblock container %}
+
+
+
     <!--PROJECTS START-->
     <div class="row my-4">
         <!--            .col-sm*8>img.w-100[src="https://picsum.photos/id/2$/1200/600"]-->
