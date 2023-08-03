@@ -35,6 +35,7 @@ def about(request):
     }
     return render(request, 'page/about.html', context)
 
+
 def contact(request):
     page_title="Contact"
     hero_title = "Contact Us!"
