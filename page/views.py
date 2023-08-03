@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-
-
 # from django.http import HttpResponse
 
 
@@ -10,6 +8,9 @@ from django.shortcuts import render
 
 FAKE_DATABASE = [
     f"https://picsum.photos/id/{id}/1200/600 " for id in range(21, 29)
+]
+FAKE_DB_CAROUSEL = [
+    f"https://picsum.photos/id/{id}/1200/600 " for id in range(1, 4)
 ]
 
 
@@ -20,14 +21,15 @@ def index(request):
     page_title = "Home"
     context = {
         "page_title": page_title,
+        "fake_db_carousel": FAKE_DB_CAROUSEL,
     }
     return render(request, 'page/index.html', context)
 
 
 def about(request):
-    page_title="About"
+    page_title = "About"
     hero_title = "About Us!"
-    hero_text= "At the heart of TechDjango Solutions beats a team of passionate developers, designers"
+    hero_text = "At the heart of TechDjango Solutions beats a team of passionate developers, designers"
     context = {
         "page_title": page_title,
         "hero_title": hero_title,
@@ -37,9 +39,9 @@ def about(request):
 
 
 def contact(request):
-    page_title="Contact"
+    page_title = "Contact"
     hero_title = "Contact Us!"
-    hero_text= "We are here to help you"
+    hero_text = "We are here to help you"
     context = {
         "page_title": page_title,
         "hero_title": hero_title,
