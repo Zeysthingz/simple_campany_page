@@ -1,19 +1,15 @@
 
 <!--PROJECTS START-->
+
 <div class="row my-4">
     <!--            .col-sm*8>img.w-100[src="https://picsum.photos/id/2$/1200/600"]-->
     <div class="col-sm-12">
         <h2 class="text-center">Our Projects</h2>
         <hr>
     </div>
-    <div class="col-sm col-6"><img src="https://picsum.photos/id/21/1200/600" alt="" class="w-100 img-thumbnail"></div>
-    <div class="col-sm col-6"><img src="https://picsum.photos/id/22/1200/600" alt="" class="w-100 img-thumbnail"></div>
-    <div class="col-sm col-6"><img src="https://picsum.photos/id/23/1200/600" alt="" class="w-100 img-thumbnail"></div>
-    <div class="col-sm col-6"><img src="https://picsum.photos/id/24/1200/600" alt="" class="w-100 img-thumbnail"></div>
-    <div class="col-sm col-6"><img src="https://picsum.photos/id/25/1200/600" alt="" class="w-100 img-thumbnail"></div>
-    <div class="col-sm col-6"><img src="https://picsum.photos/id/26/1200/600" alt="" class="w-100 img-thumbnail"></div>
-    <div class="col-sm col-6"><img src="https://picsum.photos/id/27/1200/600" alt="" class="w-100 img-thumbnail"></div>
-    <div class="col-sm col-6"><img src="https://picsum.photos/id/28/1200/600" alt="" class="w-100 img-thumbnail"></div>
+        {% for item in fake_database %}
+        <div class="col-sm col-6"><img src="{{ item }}" alt="" class="w-100 img-thumbnail"></div>
+        {% endfor %}
 </div>
 <!--PROJECTS END-->
 
