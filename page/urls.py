@@ -9,6 +9,6 @@ from .views import (
 urlpatterns = [
     path('index/', index, name='index'),
     path('about/', about, name='about'),
-    path('contact/', contact, name='contact'),
+    # path('contact/', contact, name='contact'),
     path('<slug:slug>', page_view, name='pages'),
 ]

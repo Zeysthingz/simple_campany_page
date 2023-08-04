@@ -52,8 +52,12 @@ def contact(request):
 
 def page_view(request,slug):
     result = list(filter(lambda x: (x['url'] == slug), FAKE_DB_PAGES))
-    print("resul",result)
-    context = {}
+
+    context = {
+        "fake_database": FAKE_DATABASE,
+        "page_title":result[0]['title'],
+        "context":result[0]['detail'],
+    }
     if result:
-        return render(request, 'page/contact.html', context)
+        return render(request, 'page/page_detail.html', context)
     raise Http404("Page not found")

@@ -1,5 +1,5 @@
-CONTACT_DETAILS={
-        """
+#   Create fake database for pages with doc strings
+CONTACT_DETAILS='''
             <div class="container">
                 <div class="row">
                     <!--            sağ ve soldan 2lk grıdler bos kalır offset ıkı olmasıda sagdan ıkı bosluk yana kaydırması demektır-->
@@ -41,11 +41,11 @@ CONTACT_DETAILS={
                     </div>
                 </div>
             </div>
-        """
-    }
+    '''
 
 FAKE_DB_PAGES=[
-    {"url": "contact",  "detail": CONTACT_DETAILS},
-    {"url": "info",  "detail": CONTACT_DETAILS},
+    {"url": "contact",  "detail": CONTACT_DETAILS,"title":"Contact"},
+    {"url": "index",  "detail": CONTACT_DETAILS,"title":"Home"},
+    {"url": "about",  "detail": CONTACT_DETAILS,"title":"About"},
 ]
 
