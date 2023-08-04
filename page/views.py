@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-# from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 
-
+from .fake_db.pages import FAKE_DB_PAGES
 # Create your views here.
 
 
@@ -49,3 +49,11 @@ def contact(request):
         "fake_database": FAKE_DATABASE,
     }
     return render(request, 'page/contact.html', context)
+
+def page_view(request,slug):
+    result = list(filter(lambda x: (x['url'] == slug), FAKE_DB_PAGES))
+    print("resul",result)
+    context = {}
+    if result:
+        return render(request, 'page/contact.html', context)
+    raise Http404("Page not found")
