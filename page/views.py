@@ -34,6 +34,7 @@ def about(request):
         "page_title": page_title,
         "hero_title": hero_title,
         "hero_text": hero_text,
+
     }
     return render(request, 'page/about.html', context)
 
@@ -55,6 +56,7 @@ def page_view(request,slug):
 
     context = {
         "fake_database": FAKE_DATABASE,
+        "hero_text" : "We are here to help you",
         "page_title":result[0]['title'],
         "context":result[0]['detail'],
     }
