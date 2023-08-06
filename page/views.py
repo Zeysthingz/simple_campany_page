@@ -53,7 +53,6 @@ def contact(request):
 
 def page_view(request,slug):
     result = list(filter(lambda x: (x['url'] == slug), FAKE_DB_PAGES))
-
     context = {
         "fake_database": FAKE_DATABASE,
         "hero_text" : "We are here to help you",

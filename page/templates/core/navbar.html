@@ -1,4 +1,7 @@
 
+{% if request.path == 'products/' %}
+    <h1>{{request.path}}</h1>
+{% endif %}
 <!--    NAV START-->
 <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
     <div class="container-fluid">
@@ -10,18 +13,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/index/' %} active {% endif %} " aria-current="page"
+                    <a class="nav-link {% if request.path == '' %} active {% endif %} " aria-current="page"
                        href="{% url 'index'%}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/about/' %} active {% endif %}" href="/about/">About
+                    <a class="nav-link {% if request.path == '/about/' %} active {% endif %}" href="company/about/">About
                         Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Developers</a>
+                    <a class="nav-link {% if request.path == '/company/products/' %} active {% endif %}" href="{% url 'products'%}">
+                        Products</a>
+
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == '/contact/' %} active {% endif %}"
+                    <a class="nav-link {% if request.path == 'contact' %} active {% endif %}"
                        href="/contact/">Contact</a>
                 </li>
             </ul>

@@ -1,0 +1,14 @@
+<!--kinda imported base html-->
+{% extends 'core/base.html' %}
+{% block title %}{{ page_title }} | {% endblock title%}
+{% block container-fluid %}
+{% endblock container-fluid %}
+{% block container %}
+<div class="row">
+    <div class="col-sm-6 offset-3">
+        <img src="{{ item.url }}" alt="" class="img-thumbnail">
+        <h1 class="display-6 my-4" >{{ item.title }}</h1>
+        <p>{{ item.detail}}</p>
+    </div>
+</div>
+{% endblock container %}
